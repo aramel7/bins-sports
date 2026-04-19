@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>관리자 | 빈스 스포츠 마케팅</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet" />
+  <style>
+    body { font-family: 'Noto Sans KR', sans-serif; }
+    .gold-bg { background: linear-gradient(135deg, #a07d10, #c9a227, #e6c458); }
+  </style>
+</head>
+<body class="bg-gray-100 min-h-screen">
+
+  <!-- 로그인 화면 -->
+  <div id="login-screen" class="min-h-screen flex items-center justify-center px-4">
+    <div class="bg-white rounded-3xl p-10 shadow-xl max-w-sm w-full text-center">
+      <div class="mb-6">
+        <img src="logo.png" alt="빈스 스포츠 마케팅" style="height:44px;width:auto;display:inline-block;background:#f2f0ec;border-radius:8px;padding:5px 14px;" />
+      </div>
+      <h1 class="text-2xl font-black mb-2">관리자 로그인</h1>
+      <p class="text-gray-400 text-sm mb-8">빈스 스포츠 마케팅 신청 관리</p>
+      <input id="pw-input" type="password" placeholder="비밀번호 입력"
+        class="w-full border-2 border-gray-200 rounded-xl px-4 py-3 mb-4 text-center text-lg focus:outline-none focus:border-yellow-500"
+        onkeydown="if(event.key==='Enter')doLogin()" />
+      <div id="login-error" class="hidden text-red-500 text-sm mb-3">비밀번호가 틀렸습니다.</div>
+      <button onclick="doLogin()" class="w-full gold-bg text-white font-black py-3 rounded-xl text-lg hover:opacity-90 transition-all">로그인</button>
+    </div>
+  </div>
+
+  <!-- 관리자 대시보드 -->
+  <div id="admin-screen" class="hidden">
+
+    <!-- 상단 헤더 -->
+    <header class="bg-white border-b border-gray-200 px-6 py-4 flex items-center justify-between sticky top-0 z-10 shadow-sm">
+      <div class="flex items-center gap-3">
+        <img src="logo.png" alt="빈스 스포츠" style="height:36px;background:#f2f0ec;border-radius:6px;padding:4px 10px;" />
+        <span class="font-black text-gray-900 text-lg">신청 관리</span>
+      </div>
+      <div class="flex items-center gap-4">
+        <span id="total-badge" class="bg-yellow-100 text-yellow-800 text-sm font-bold px-3 py-1 rounded-full"></span>
+        <button onclick="exportCSV()" class="text-sm text-gray-500 border border-gray-200 rounded-lg px-3 py-1.5 hover:bg-gray-50">CSV 내보내기</button>
+        <button onclick="doLogout()" class="text-sm text-gray-500 hover:text-gray-900">로그아웃</button>
+      </div>
+    </header>
+
+    <div class="max-w-7xl mx-auto px-4 py-8">
+
+      <!-- 통계 카드 -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+        <div class="bg-white rounded-2xl p-5 shadow-sm border border-gray-100">
+          <div class="text-gray-400 text-sm mb-1">전체 신청</div>
+          <div id="stat-total" class="text-3xl font-black text-gray-900">0</div>
+        </div>
+        <div class="bg-white rounded-2xl p-5 shadow-sm border border-gray-100">
+          <div class="text-gray-400 text-sm mb-1">레슨</div>
+          <div id="stat-lesson" class="text-3xl font-black text-green-700">0</div>
+        </div>
+        <div class="bg-white rounded-2xl p-5 shadow-sm border border-gray-100">
+          <div class="text-gray-400 text-sm mb-1">1박2일 패키지</div>
+          <div id="stat-pkg" class="text-3xl font-black text-amber-700">0</div>
+        </div>
+        <div class="bg-white rounded-2xl p-5 shadow-sm border border-gray-100">
+          <div class="text-gray-400 text-sm mb-1">전지훈련</div>
+          <div id="stat-camp" class="text-3xl font-black text-blue-700">0</div>
+        </div>
+      </div>
+
+      <!-- 필터 탭 -->
+      <div class="flex gap-2 mb-6 flex-wrap">
+        <button onclick="filterBy('전체')" class="filter-btn active bg-gray-900 text-white font-bold px-5 py-2 rounded-full text-sm">전체</button>
+        <button onclick="filterBy('레슨')" class="filter-btn bg-white text-gray-600 font-bold px-5 py-2 rounded-full text-sm border border-gray-200 hover:bg-gray-50">레슨</button>
+        <button onclick="filterBy('1박2일패키지')" class="filter-btn bg-white text-gray-600 font-bold px-5 py-2 rounded-full text-sm border border-gray-200 hover:bg-gray-50">1박2일 패키지</button>
+        <button onclick="filterBy('전지훈련')" class="filter-btn bg-white text-gray-600 font-bold px-5 py-2 rounded-full text-sm border border-gray-200 hover:bg-gray-50">전지훈련</button>
+        <button onclick="filterBy('신규')" class="filter-btn bg-red-50 text-red-600 font-bold px-5 py-2 rounded-full text-sm border border-red-200 hover:bg-red-100">🔴 신규만</button>
+      </div>
+
+      <!-- 테이블 -->
+      <div class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
+        <div id="empty-state" class="hidden py-20 text-center">
+          <div class="text-5xl mb-4">📋</div>
+          <p class="text-gray-400">신청 내역이 없습니다.</p>
+        </div>
+        <div class="overflow-x-auto">
+          <table class="w-full text-sm" id="apps-table">
+            <thead class="bg-gray-50 border-b border-gray-100">
+              <tr>
+                <th class="text-left px-5 py-4 text-gray-500 font-bold text-xs uppercase tracking-wider">신청일시</th>
+                <th class="text-left px-5 py-4 text-gray-500 font-bold text-xs uppercase tracking-wider">종류</th>
+                <th class="text-left px-5 py-4 text-gray-500 font-bold text-xs uppercase tracking-wider">이름</th>
+                <th class="text-left px-5 py-4 text-gray-500 font-bold text-xs uppercase tracking-wider">연락처</th>
+                <th class="text-left px-5 py-4 text-gray-500 font-bold text-xs uppercase tracking-wider">상세</th>
+                <th class="text-left px-5 py-4 text-gray-500 font-bold text-xs uppercase tracking-wider">문의사항</th>
+                <th class="text-left px-5 py-4 text-gray-500 font-bold text-xs uppercase tracking-wider">상태</th>
+                <th class="text-left px-5 py-4 text-gray-500 font-bold text-xs uppercase tracking-wider">관리</th>
+              </tr>
+            </thead>
+            <tbody id="apps-body"></tbody>
+          </table>
+        </div>
+      </div>
+
+      <p class="text-center text-gray-400 text-xs mt-6">신청 데이터는 이 기기의 브라우저에 저장됩니다. <a href="index.html" class="underline hover:text-gray-600">홈으로</a></p>
+    </div>
+  </div>
+
+  <script src="bins-admin.js"></script>
+  <script>
+    const ADMIN_PW = 'bins2026!';
+    const STORAGE_KEY = 'bins_applications';
+    let currentFilter = '전체';
+
+    function doLogin() {
+      const pw = document.getElementById('pw-input').value;
+      if (pw === ADMIN_PW) {
+        document.getElementById('login-screen').classList.add('hidden');
+        document.getElementById('admin-screen').classList.remove('hidden');
+        renderDashboard();
+      } else {
+        document.getElementById('login-error').classList.remove('hidden');
+        document.getElementById('pw-input').value = '';
+        document.getElementById('pw-input').focus();
+      }
+    }
+
+    function doLogout() {
+      document.getElementById('admin-screen').classList.add('hidden');
+      document.getElementById('login-screen').classList.remove('hidden');
+      document.getElementById('pw-input').value = '';
+    }
+
+    function getApps() {
+      try { return JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]'); } catch { return []; }
+    }
+
+    function saveApps(apps) {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(apps));
+    }
+
+    function filterBy(type) {
+      currentFilter = type;
+      document.querySelectorAll('.filter-btn').forEach(b => {
+        b.classList.remove('bg-gray-900', 'text-white', 'bg-red-100');
+        b.classList.add('bg-white', 'text-gray-600', 'border', 'border-gray-200');
+      });
+      event.target.classList.remove('bg-white', 'text-gray-600', 'border', 'border-gray-200');
+      event.target.classList.add('bg-gray-900', 'text-white');
+      renderTable();
+    }
+
+    function typeLabel(type) {
+      const map = { '레슨': ['bg-green-100 text-green-800', '레슨'], '1박2일패키지': ['bg-amber-100 text-amber-800', '1박2일 패키지'], '전지훈련': ['bg-blue-100 text-blue-800', '전지훈련'] };
+      const [cls, label] = map[type] || ['bg-gray-100 text-gray-700', type];
+      return `<span class="inline-block ${cls} text-xs font-bold px-2.5 py-1 rounded-full">${label}</span>`;
+    }
+
+    function fmtDate(iso) {
+      const d = new Date(iso);
+      return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}<br/><span class="text-gray-400">${String(d.getHours()).padStart(2,'0')}:${String(d.getMinutes()).padStart(2,'0')}</span>`;
+    }
+
+    function markDone(id) {
+      const apps = getApps();
+      const idx = apps.findIndex(a => a.id === id);
+      if (idx > -1) { apps[idx].status = '확인완료'; saveApps(apps); renderDashboard(); }
+    }
+
+    function deleteApp(id) {
+      if (!confirm('이 신청을 삭제하시겠습니까?')) return;
+      const apps = getApps().filter(a => a.id !== id);
+      saveApps(apps);
+      renderDashboard();
+    }
+
+    function renderDashboard() {
+      const apps = getApps();
+      document.getElementById('stat-total').textContent = apps.length;
+      document.getElementById('stat-lesson').textContent = apps.filter(a => a.type === '레슨').length;
+      document.getElementById('stat-pkg').textContent = apps.filter(a => a.type === '1박2일패키지').length;
+      document.getElementById('stat-camp').textContent = apps.filter(a => a.type === '전지훈련').length;
+      const newCount = apps.filter(a => a.status === '신규').length;
+      document.getElementById('total-badge').textContent = newCount > 0 ? `신규 ${newCount}건` : `총 ${apps.length}건`;
+      renderTable();
+    }
+
+    function renderTable() {
+      const apps = getApps().slice().reverse();
+      let filtered = apps;
+      if (currentFilter === '신규') filtered = apps.filter(a => a.status === '신규');
+      else if (currentFilter !== '전체') filtered = apps.filter(a => a.type === currentFilter);
+
+      const tbody = document.getElementById('apps-body');
+      const empty = document.getElementById('empty-state');
+
+      if (filtered.length === 0) {
+        empty.classList.remove('hidden');
+        tbody.innerHTML = '';
+        return;
+      }
+      empty.classList.add('hidden');
+
+      tbody.innerHTML = filtered.map(a => `
+        <tr class="border-b border-gray-50 hover:bg-gray-50 transition-colors ${a.status === '신규' ? 'bg-yellow-50/40' : ''}">
+          <td class="px-5 py-4 text-xs text-gray-600 whitespace-nowrap">${fmtDate(a.submittedAt)}</td>
+          <td class="px-5 py-4">${typeLabel(a.type)}</td>
+          <td class="px-5 py-4 font-bold text-gray-900">${a.name || '-'}</td>
+          <td class="px-5 py-4 text-gray-700 whitespace-nowrap">${a.phone || '-'}</td>
+          <td class="px-5 py-4 text-gray-600 text-xs max-w-[160px]">${a.detail || ''}${a.score ? '<br/>스코어: '+a.score : ''}${a.experience ? '<br/>'+a.experience : ''}${a.companions ? '<br/>동반자: '+a.companions : ''}</td>
+          <td class="px-5 py-4 text-gray-500 text-xs max-w-[180px]">${a.message || '-'}</td>
+          <td class="px-5 py-4">
+            ${a.status === '신규'
+              ? '<span class="inline-block bg-red-100 text-red-700 text-xs font-bold px-2.5 py-1 rounded-full">신규</span>'
+              : '<span class="inline-block bg-gray-100 text-gray-500 text-xs font-bold px-2.5 py-1 rounded-full">확인완료</span>'}
+          </td>
+          <td class="px-5 py-4 whitespace-nowrap">
+            <div class="flex gap-2">
+              ${a.status === '신규' ? `<button onclick="markDone('${a.id}')" class="text-xs bg-green-600 text-white px-3 py-1.5 rounded-lg hover:bg-green-700 font-bold">확인</button>` : ''}
+              <button onclick="deleteApp('${a.id}')" class="text-xs bg-red-50 text-red-600 px-3 py-1.5 rounded-lg hover:bg-red-100 font-bold">삭제</button>
+            </div>
+          </td>
+        </tr>
+      `).join('');
+    }
+
+    function exportCSV() {
+      const apps = getApps();
+      const headers = ['신청일시', '종류', '이름', '연락처', '상세', '스코어', '동반자', '문의사항', '상태'];
+      const rows = apps.map(a => [
+        new Date(a.submittedAt).toLocaleString('ko-KR'),
+        a.type, a.name, a.phone, a.detail || '', a.score || '', a.companions || '', a.message || '', a.status
+      ].map(v => `"${String(v).replace(/"/g, '""')}"`).join(','));
+      const csv = '\uFEFF' + [headers.join(','), ...rows].join('\n');
+      const blob = new Blob([csv], { type: 'text/csv' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a'); a.href = url;
+      a.download = `빈스신청내역_${new Date().toISOString().slice(0,10)}.csv`;
+      a.click(); URL.revokeObjectURL(url);
+    }
+  </script>
+</body>
+</html>
