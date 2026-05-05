@@ -23,7 +23,7 @@ function getApplications() {
 
 function showSuccessPopup(type) {
   const labels = {
-    '레슨': '레슨 신청',
+    '기업행사': '기업행사 문의',
     '1박2일패키지': '1박2일 패키지 예약',
     '전지훈련': '전지훈련 신청'
   };

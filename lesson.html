@@ -3,427 +3,123 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>레슨 안내 & 신청 | 빈스 스포츠 마케팅</title>
-  <meta name="description" content="유튜브만 봐선 안 느는 이유가 있습니다. 빈스 스포츠 마케팅의 1:1 맞춤 레슨으로 실력을 바꾸세요." />
-  <meta property="og:title" content="레슨 안내 & 신청 | 빈스 스포츠 마케팅" />
-  <meta property="og:description" content="정민상프로 레슨, 전지훈련, 라운딩 패키지 안내" />
+  <title>기업 골프행사 문의 | 빈스 스포츠 마케팅</title>
+  <meta name="description" content="빈스 스포츠 마케팅 기업 골프행사 상담. 전지훈련, 기업행사, 1박2일 패키지, 프로 섭외와 운영을 한 번에 상담하세요." />
+  <meta property="og:title" content="기업 골프행사 문의 | 빈스 스포츠 마케팅" />
+  <meta property="og:description" content="전지훈련 · 기업행사 · 1박2일 패키지 전문 운영 상담" />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://aramel7.github.io/bins-sports/lesson.html" />
-  <meta property="og:image" content="https://aramel7.github.io/bins-sports/logo.png" />
+  <meta property="og:url" content="https://binsports.site/lesson.html" />
+  <meta property="og:image" content="https://binsports.site/logo.png" />
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet" />
   <style>
     body { font-family: 'Noto Sans KR', sans-serif; }
-    .hero-bg { background: linear-gradient(135deg, #052e16 0%, #166534 60%, #052e16 100%); }
     .gold-bg { background: linear-gradient(135deg, #a07d10, #c9a227, #e6c458); }
-    .card-hover { transition: all 0.3s ease; }
-    .card-hover:hover { transform: translateY(-4px); box-shadow: 0 16px 32px rgba(0,0,0,0.1); }
-    .nav-link::after { content:''; display:block; height:2px; background:#c9a227; width:0; transition:width 0.3s; }
-    .nav-link:hover::after { width:100%; }
-    .popular-badge { position:absolute; top:-12px; left:50%; transform:translateX(-50%); }
-    input, select, textarea { transition: border-color 0.2s; }
-    input:focus, select:focus, textarea:focus { outline: none; border-color: #c9a227; box-shadow: 0 0 0 3px rgba(201,162,39,0.15); }
+    .hero-bg { background: radial-gradient(circle at top right, rgba(201,162,39,.28), transparent 36%), linear-gradient(135deg,#052e16 0%,#14532d 60%,#052e16 100%); }
+    .card-hover { transition: all .25s ease; }
+    .card-hover:hover { transform: translateY(-4px); box-shadow: 0 18px 36px rgba(0,0,0,.12); }
   </style>
 </head>
 <body class="bg-white text-gray-900">
-
-
-  <!-- Nav -->
   <nav class="fixed top-0 left-0 right-0 z-50 bg-green-950/95 backdrop-blur-md border-b border-green-900">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex items-center justify-between h-16">
-        <a href="index.html" style="display:inline-block;background:#f2f0ec;border-radius:8px;padding:5px 14px;line-height:0;">
-          <img src="logo.png" alt="빈스 스포츠 마케팅" style="height:42px;width:auto;display:block;" />
-        </a>
-        <div class="hidden md:flex items-center gap-8">
-          <a href="collection.html" class="nav-link text-gray-300 hover:text-white text-sm font-medium">컬렉션</a>
-          <a href="golfzone.html" class="nav-link text-gray-300 hover:text-white text-sm font-medium">골프존파크</a>
-          <a href="pro.html" class="nav-link text-gray-300 hover:text-white text-sm font-medium">헤드프로</a>
-          <a href="pros.html" class="nav-link text-gray-300 hover:text-white text-sm font-medium">소속 프로</a>
-          <a href="package.html" class="nav-link text-gray-300 hover:text-white text-sm font-medium">1박2일 패키지</a>
-          <a href="camp.html" class="nav-link text-gray-300 hover:text-white text-sm font-medium">전지훈련</a>
-          <a href="lesson.html" class="nav-link text-gray-300 hover:text-white text-sm font-medium">레슨 안내</a>
-        </div>
-        <a href="#apply" class="hidden md:block gold-bg text-white text-sm font-bold px-5 py-2 rounded-full hover:opacity-90">지금 신청 →</a>
+    <div class="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
+      <a href="index.html" style="display:inline-block;background:#f2f0ec;border-radius:8px;padding:5px 14px;line-height:0;"><img src="logo.png" alt="빈스 스포츠 마케팅" style="height:42px;width:auto;display:block;" /></a>
+      <div class="hidden md:flex items-center gap-7 text-sm">
+        <a href="golfzone.html" class="text-gray-300 hover:text-white">골프존파크</a>
+        <a href="pro.html" class="text-gray-300 hover:text-white">헤드프로</a>
+        <a href="pros.html" class="text-gray-300 hover:text-white">프로진</a>
+        <a href="camp.html" class="text-gray-300 hover:text-white">전지훈련</a>
+        <a href="package.html" class="text-gray-300 hover:text-white">1박2일 패키지</a>
+        <a href="lesson.html" class="text-white font-bold">기업행사</a>
       </div>
-    </div>
-    <div id="mob-menu" class="hidden md:hidden bg-green-950 border-t border-green-900 px-4 py-4 space-y-3">
-      <a href="collection.html" class="block text-gray-300 py-2 text-sm">컬렉션</a>
-      <a href="golfzone.html" class="block text-gray-300 py-2 text-sm">골프존파크</a>
-      <a href="pro.html" class="block text-gray-300 py-2 text-sm">헤드프로</a>
-      <a href="pros.html" class="block text-gray-300 py-2 text-sm">소속 프로</a>
-      <a href="package.html" class="block text-gray-300 py-2 text-sm">1박2일 패키지</a>
-      <a href="camp.html" class="block text-gray-300 py-2 text-sm">전지훈련</a>
-      <a href="lesson.html" class="block text-gray-300 py-2 text-sm">레슨 안내</a>
-      <a href="lesson.html" class="block text-yellow-400 py-2 text-sm font-bold">레슨 안내</a>
-      <a href="pros.html" class="block text-gray-300 py-2 text-sm">소속 프로</a>
-      <a href="camp.html" class="block text-gray-300 py-2 text-sm">전지훈련</a>
-      <a href="package.html" class="block text-gray-300 py-2 text-sm">1박2일 패키지</a>
-      <a href="collection.html" class="block text-gray-300 py-2 text-sm">컬렉션</a>
-      <a href="golfzone.html" class="block text-gray-300 py-2 text-sm">골프존파크</a>
-      <a href="#apply" class="block gold-bg text-white text-center py-3 rounded-full font-bold text-sm">지금 신청 →</a>
+      <a href="#apply" class="gold-bg text-white text-sm font-bold px-5 py-2 rounded-full hover:opacity-90">행사 문의</a>
     </div>
   </nav>
 
-  <!-- Hero -->
-  <section class="hero-bg pt-32 pb-20">
-    <div class="max-w-4xl mx-auto px-4 text-center">
-      <div class="inline-flex items-center gap-2 bg-yellow-400/20 border border-yellow-400/30 rounded-full px-4 py-2 mb-6">
-        <span class="text-yellow-400 text-sm font-medium">1:1 맞춤 레슨</span>
+  <section class="hero-bg pt-32 pb-24 text-center text-white">
+    <div class="max-w-4xl mx-auto px-4">
+      <div class="inline-flex items-center gap-2 bg-yellow-400/20 border border-yellow-400/30 rounded-full px-5 py-2 mb-7">
+        <span class="text-yellow-300 text-sm font-bold">전지훈련 · 기업행사 · 1박2일 패키지 전문</span>
       </div>
-      <h1 class="text-5xl md:text-6xl font-black text-white leading-tight mb-6">
-        유튜브만 봐선 <span class="text-yellow-400">안 느는 이유</span>가 있습니다
-      </h1>
-      <p class="text-gray-300 text-xl leading-relaxed mb-4">
-        피드백 없는 연습은 나쁜 습관만 굳힙니다.<br />
-        <span class="text-white font-medium whitespace-nowrap">나를 아는 프로의 즉각적인 피드백</span><span class="whitespace-nowrap">, 그것이 실력을 바꿉니다.</span>
-      </p>
-      <p class="text-gray-400 mb-10">KPGA 정민상 프로와 함께 스윙의 근본부터 잡습니다</p>
-      <a href="#apply" class="gold-bg text-white font-bold px-10 py-4 rounded-full text-lg hover:opacity-90 transition-all shadow-lg inline-block">무료 상담 신청하기 →</a>
-    </div>
-  </section>
-
-  <!-- Why lesson -->
-  <section class="py-8 md:py-20 bg-gray-50">
-    <div class="max-w-5xl mx-auto px-4">
-      <div class="text-center mb-6 md:mb-12">
-        <p class="text-yellow-600 font-bold text-sm uppercase tracking-widest mb-3">레슨이 필요한 이유</p>
-        <h2 class="text-3xl md:text-4xl font-black">혼자 연습의 한계</h2>
-      </div>
-      <div class="grid md:grid-cols-2 gap-8 items-center">
-        <div class="space-y-4">
-          <div class="flex items-start gap-4 bg-white rounded-2xl p-5 shadow-sm">
-            <span class="text-2xl">❌</span>
-            <div><div class="font-bold text-gray-900 mb-1">유튜브 레슨의 문제</div><p class="text-gray-500 text-sm leading-relaxed">일반론은 넘치는데 내 스윙에 맞는 해답이 없습니다. 보는 건 되는데 막상 치면 다릅니다.</p></div>
-          </div>
-          <div class="flex items-start gap-4 bg-white rounded-2xl p-5 shadow-sm">
-            <span class="text-2xl">❌</span>
-            <div><div class="font-bold text-gray-900 mb-1">혼자 연습의 문제</div><p class="text-gray-500 text-sm leading-relaxed">잘못된 자세로 수천 번 반복하면 나쁜 습관이 몸에 각인됩니다. 나중에 고치기가 더 힘들어집니다.</p></div>
-          </div>
-          <div class="flex items-start gap-4 bg-white rounded-2xl p-5 shadow-sm">
-            <span class="text-2xl">❌</span>
-            <div><div class="font-bold text-gray-900 mb-1">단기 레슨의 문제</div><p class="text-gray-500 text-sm leading-relaxed">1~2회 레슨으로는 바뀌지 않습니다. 나를 알고 있는 프로와의 지속적인 관계가 필요합니다.</p></div>
-          </div>
-        </div>
-        <div class="bg-green-950 rounded-3xl p-8 text-white">
-          <h3 class="text-2xl font-black text-yellow-400 mb-6">빈스 레슨이 다른 이유</h3>
-          <div class="space-y-4">
-            <div class="flex items-start gap-3">
-              <span class="w-6 h-6 bg-yellow-400 rounded-full flex items-center justify-center text-green-950 text-xs font-black flex-shrink-0 mt-0.5">✓</span>
-              <p class="text-gray-300 text-sm leading-relaxed"><span class="text-white font-medium">스윙 영상 분석</span> — 매 레슨마다 스윙을 촬영하고 직전 레슨과 비교하며 변화를 추적합니다.</p>
-            </div>
-            <div class="flex items-start gap-3">
-              <span class="w-6 h-6 bg-yellow-400 rounded-full flex items-center justify-center text-green-950 text-xs font-black flex-shrink-0 mt-0.5">✓</span>
-              <p class="text-gray-300 text-sm leading-relaxed"><span class="text-white font-medium">나만의 개선 플랜</span> — 같은 레슨이 없습니다. 현재 실력과 목표에 맞는 개인 맞춤 커리큘럼으로 진행합니다.</p>
-            </div>
-            <div class="flex items-start gap-3">
-              <span class="w-6 h-6 bg-yellow-400 rounded-full flex items-center justify-center text-green-950 text-xs font-black flex-shrink-0 mt-0.5">✓</span>
-              <p class="text-gray-300 text-sm leading-relaxed"><span class="text-white font-medium">실전 연습 포함</span> — 연습장 레슨에서 끝나지 않습니다. 필드에서 써먹는 것까지 가르칩니다.</p>
-            </div>
-            <div class="flex items-start gap-3">
-              <span class="w-6 h-6 bg-yellow-400 rounded-full flex items-center justify-center text-green-950 text-xs font-black flex-shrink-0 mt-0.5">✓</span>
-              <p class="text-gray-300 text-sm leading-relaxed"><span class="text-white font-medium">레슨 외 카톡 질문</span> — 레슨 사이사이에도 질문하면 바로 답변합니다.</p>
-            </div>
-          </div>
-        </div>
+      <h1 class="text-4xl md:text-6xl font-black leading-tight mb-6">골프 행사는<br><span class="text-yellow-400">기획부터 운영까지</span><br>한 번에 맡기세요</h1>
+      <p class="text-lg md:text-xl text-green-100 leading-relaxed mb-9">빈스 스포츠 마케팅은 기업·단체 골프행사, 전지훈련, 라운딩 패키지 운영에 집중합니다.</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="#apply" class="gold-bg text-white font-bold px-10 py-4 rounded-full text-lg shadow-lg">행사 상담 남기기 →</a>
+        <a href="camp.html" class="border-2 border-white/30 text-white font-bold px-10 py-4 rounded-full text-lg hover:bg-white/10">전지훈련 보기</a>
       </div>
     </div>
   </section>
 
-  <!-- Pricing -->
-  <section class="py-10 md:py-24 bg-white">
-    <div class="max-w-5xl mx-auto px-4">
-      <div class="text-center mb-8 md:mb-16">
-        <p class="text-yellow-600 font-bold text-sm uppercase tracking-widest mb-3">레슨 요금</p>
-        <h2 class="text-4xl font-black">나에게 맞는<br />플랜을 선택하세요</h2>
-        <p class="text-gray-500 mt-3">모든 플랜 첫 1회 무료 체험 레슨 포함</p>
+  <section class="py-16 md:py-24 bg-white">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="text-center mb-12">
+        <p class="text-yellow-600 font-bold text-sm uppercase tracking-widest mb-3">BINS EVENT SYSTEM</p>
+        <h2 class="text-3xl md:text-5xl font-black">이런 행사를 진행합니다</h2>
       </div>
       <div class="grid md:grid-cols-3 gap-6">
-        <!-- Basic -->
-        <div class="border-2 border-gray-200 rounded-3xl p-8 card-hover relative">
-          <div class="text-4xl mb-4">🌱</div>
-          <h3 class="text-xl font-black text-gray-900 mb-2">입문반</h3>
-          <p class="text-gray-500 text-sm mb-6">처음 시작하는 분, 기초부터 제대로</p>
-          <div class="mb-6">
-            <span class="text-4xl font-black text-gray-900">6만</span>
-            <span class="text-gray-500 text-sm">원 / 1회</span>
-            <p class="text-gray-400 text-xs mt-1">월 4회 기준 24만원</p>
-          </div>
-          <ul class="space-y-3 text-sm text-gray-600 mb-8">
-            <li class="flex items-center gap-2"><span class="text-green-600">✓</span> 1:1 개인 레슨 50분</li>
-            <li class="flex items-center gap-2"><span class="text-green-600">✓</span> 기초 그립·자세·어드레스</li>
-            <li class="flex items-center gap-2"><span class="text-green-600">✓</span> 스윙 영상 촬영 제공</li>
-            <li class="flex items-center gap-2"><span class="text-green-600">✓</span> 첫 레슨 무료 체험</li>
-            <li class="flex items-center gap-2 text-gray-300"><span>✗</span> 론치 모니터 분석</li>
-            <li class="flex items-center gap-2 text-gray-300"><span>✗</span> 실전 라운딩 동반</li>
-          </ul>
-          <a href="#apply" class="block text-center border-2 border-green-800 text-green-800 font-bold py-3 rounded-full hover:bg-green-800 hover:text-white transition-all">신청하기</a>
+        <a href="camp.html" class="block bg-green-950 text-white rounded-3xl p-8 card-hover">
+          <div class="text-5xl mb-5">✈️</div><h3 class="text-2xl font-black mb-3">해외·국내 전지훈련</h3>
+          <p class="text-gray-300 text-sm leading-relaxed">프로 동행, 라운딩, 식사, 숙박, 일정표까지 묶어 운영하는 집중형 골프 캠프.</p>
+        </a>
+        <div class="bg-white border-2 border-gray-100 rounded-3xl p-8 card-hover shadow-sm">
+          <div class="text-5xl mb-5">🏢</div><h3 class="text-2xl font-black mb-3">기업 골프행사</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">고객 초청, 임직원 워크숍, VIP 라운딩, 시상식, 프로 섭외까지 행사 목적에 맞게 설계합니다.</p>
         </div>
-
-        <!-- Regular - Popular -->
-        <div class="border-2 border-yellow-400 rounded-3xl p-8 card-hover relative bg-green-950 shadow-xl shadow-green-950/20">
-          <div class="popular-badge">
-            <span class="gold-bg text-white text-xs font-black px-4 py-1.5 rounded-full">⭐ 가장 인기</span>
-          </div>
-          <div class="text-4xl mb-4">🏌️</div>
-          <h3 class="text-xl font-black text-white mb-2">정규반</h3>
-          <p class="text-gray-300 text-sm mb-6">실력 향상이 목표인 분, 체계적인 커리큘럼</p>
-          <div class="mb-6">
-            <span class="text-4xl font-black text-yellow-400">8만</span>
-            <span class="text-gray-300 text-sm">원 / 1회</span>
-            <p class="text-gray-400 text-xs mt-1">월 8회 기준 64만원</p>
-          </div>
-          <ul class="space-y-3 text-sm text-gray-300 mb-8">
-            <li class="flex items-center gap-2"><span class="text-yellow-400">✓</span> 1:1 개인 레슨 60분</li>
-            <li class="flex items-center gap-2"><span class="text-yellow-400">✓</span> 맞춤 커리큘럼 설계</li>
-            <li class="flex items-center gap-2"><span class="text-yellow-400">✓</span> 스윙 영상 비교 분석</li>
-            <li class="flex items-center gap-2"><span class="text-yellow-400">✓</span> 론치 모니터 데이터 분석</li>
-            <li class="flex items-center gap-2"><span class="text-yellow-400">✓</span> 레슨 외 카톡 질문 가능</li>
-            <li class="flex items-center gap-2 text-gray-400"><span>✗</span> 실전 라운딩 동반</li>
-          </ul>
-          <a href="#apply" class="block text-center gold-bg text-white font-bold py-3 rounded-full hover:opacity-90 transition-all">신청하기</a>
-        </div>
-
-        <!-- Premium -->
-        <div class="border-2 border-gray-200 rounded-3xl p-8 card-hover relative">
-          <div class="text-4xl mb-4">🏆</div>
-          <h3 class="text-xl font-black text-gray-900 mb-2">프리미엄반</h3>
-          <p class="text-gray-500 text-sm mb-6">빠른 실력 향상, 라운딩까지 함께</p>
-          <div class="mb-6">
-            <span class="text-4xl font-black text-gray-900">12만</span>
-            <span class="text-gray-500 text-sm">원 / 1회</span>
-            <p class="text-gray-400 text-xs mt-1">월 8회 기준 96만원</p>
-          </div>
-          <ul class="space-y-3 text-sm text-gray-600 mb-8">
-            <li class="flex items-center gap-2"><span class="text-green-600">✓</span> 1:1 개인 레슨 90분</li>
-            <li class="flex items-center gap-2"><span class="text-green-600">✓</span> 정규반 모든 혜택 포함</li>
-            <li class="flex items-center gap-2"><span class="text-green-600">✓</span> 월 1회 실전 라운딩 동반</li>
-            <li class="flex items-center gap-2"><span class="text-green-600">✓</span> 라운딩 중 즉시 피드백</li>
-            <li class="flex items-center gap-2"><span class="text-green-600">✓</span> 멘탈 코칭 포함</li>
-            <li class="flex items-center gap-2"><span class="text-green-600">✓</span> 전용 카카오톡 채널</li>
-          </ul>
-          <a href="#apply" class="block text-center border-2 border-green-800 text-green-800 font-bold py-3 rounded-full hover:bg-green-800 hover:text-white transition-all">신청하기</a>
-        </div>
+        <a href="package.html" class="block bg-white border-2 border-gray-100 rounded-3xl p-8 card-hover shadow-sm">
+          <div class="text-5xl mb-5">⛳</div><h3 class="text-2xl font-black mb-3">1박2일 골프 패키지</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">36홀 라운딩, 숙박, 식사, 현장 코칭을 결합한 단체형 패키지 행사.</p>
+        </a>
       </div>
-      <p class="text-center text-gray-400 text-sm mt-8">* 모든 레슨은 정민상 프로 또는 소속 전문 프로가 진행합니다. 첫 1회 무료 체험 후 결정하실 수 있습니다.</p>
     </div>
   </section>
 
-  <!-- Process -->
-  <section class="py-8 md:py-20 bg-gray-50">
-    <div class="max-w-4xl mx-auto px-4">
-      <div class="text-center mb-6 md:mb-12">
-        <p class="text-yellow-600 font-bold text-sm uppercase tracking-widest mb-3">레슨 진행 과정</p>
-        <h2 class="text-3xl font-black">신청부터 첫 레슨까지</h2>
-      </div>
-      <div class="grid md:grid-cols-4 gap-4">
-        <div class="text-center">
-          <div class="w-16 h-16 bg-green-950 rounded-2xl flex items-center justify-center text-2xl mx-auto mb-4">📝</div>
-          <div class="text-yellow-600 font-bold text-sm mb-2">STEP 1</div>
-          <h3 class="font-bold text-gray-900 mb-2">신청서 작성</h3>
-          <p class="text-gray-500 text-xs leading-relaxed">아래 폼에 이름·연락처·희망 레슨 입력</p>
+  <section class="py-16 md:py-24 bg-gray-50">
+    <div class="max-w-5xl mx-auto px-4">
+      <div class="grid md:grid-cols-2 gap-10 items-center">
+        <div>
+          <p class="text-yellow-600 font-bold text-sm uppercase tracking-widest mb-3">WHY BINS</p>
+          <h2 class="text-3xl md:text-5xl font-black leading-tight mb-5">행사는<br>좋은 코스보다<br><span class="text-yellow-600">좋은 운영</span>이 먼저입니다</h2>
+          <p class="text-gray-600 leading-relaxed">참가자 동선, 조 편성, 프로 배치, 식사·숙박, 현장 진행, 사진/영상 활용까지 챙겨야 행사 만족도가 올라갑니다. 빈스는 골프행사를 단순 예약이 아니라 하나의 프로그램으로 설계합니다.</p>
         </div>
-        <div class="text-center">
-          <div class="w-16 h-16 bg-green-950 rounded-2xl flex items-center justify-center text-2xl mx-auto mb-4">📞</div>
-          <div class="text-yellow-600 font-bold text-sm mb-2">STEP 2</div>
-          <h3 class="font-bold text-gray-900 mb-2">무료 상담</h3>
-          <p class="text-gray-500 text-xs leading-relaxed">당일 또는 다음날 연락. 목표와 현황 확인</p>
-        </div>
-        <div class="text-center">
-          <div class="w-16 h-16 bg-green-950 rounded-2xl flex items-center justify-center text-2xl mx-auto mb-4">🗓️</div>
-          <div class="text-yellow-600 font-bold text-sm mb-2">STEP 3</div>
-          <h3 class="font-bold text-gray-900 mb-2">일정 확정</h3>
-          <p class="text-gray-500 text-xs leading-relaxed">원하는 날짜·시간·장소 조율 후 확정</p>
-        </div>
-        <div class="text-center">
-          <div class="w-16 h-16 gold-bg rounded-2xl flex items-center justify-center text-2xl mx-auto mb-4">⛳</div>
-          <div class="text-yellow-600 font-bold text-sm mb-2">STEP 4</div>
-          <h3 class="font-bold text-gray-900 mb-2">첫 레슨</h3>
-          <p class="text-gray-500 text-xs leading-relaxed">무료 체험 레슨으로 시작. 부담 없이!</p>
+        <div class="grid gap-4">
+          <div class="bg-white rounded-2xl p-5 shadow-sm"><b>01. 목적 확인</b><p class="text-sm text-gray-500 mt-1">VIP 접대, 임직원 워크숍, 교육형 캠프, 친목 행사 중 목표를 먼저 정리합니다.</p></div>
+          <div class="bg-white rounded-2xl p-5 shadow-sm"><b>02. 일정·예산 설계</b><p class="text-sm text-gray-500 mt-1">인원, 지역, 숙박, 식사, 프로 동행 여부에 맞춰 현실적인 안을 만듭니다.</p></div>
+          <div class="bg-white rounded-2xl p-5 shadow-sm"><b>03. 현장 운영</b><p class="text-sm text-gray-500 mt-1">라운딩 흐름, 조 편성, 시상, 현장 안내까지 행사답게 운영합니다.</p></div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Apply Form -->
-  <section id="apply" class="py-10 md:py-24 bg-white">
+  <section id="apply" class="py-16 md:py-24 bg-white">
     <div class="max-w-2xl mx-auto px-4">
-      <div class="text-center mb-6 md:mb-12">
-        <p class="text-yellow-600 font-bold text-sm uppercase tracking-widest mb-3">무료 스윙 진단 상담</p>
-        <h2 class="text-4xl font-black">상담 신청을 남겨주세요</h2>
-        <p class="text-gray-500 mt-3">이메일 접수와 카카오톡 상담 동선을 함께 열어두었습니다.</p>
+      <div class="text-center mb-10">
+        <p class="text-yellow-600 font-bold text-sm uppercase tracking-widest mb-3">EVENT INQUIRY</p>
+        <h2 class="text-4xl font-black">행사 상담을 남겨주세요</h2>
+        <p class="text-gray-500 mt-3">이메일과 카카오톡 ID로 연락받을 수 있게 연결해두었습니다.</p>
       </div>
-
-      <form id="lessonForm" name="bins-consultation" method="POST" action="/thanks.html" data-netlify="true" netlify-honeypot="bot-field" class="bg-gray-50 rounded-3xl p-8 shadow-sm space-y-5">
+      <form name="bins-consultation" method="POST" action="/thanks.html" data-netlify="true" netlify-honeypot="bot-field" class="bg-gray-50 rounded-3xl p-8 shadow-sm space-y-5">
         <input type="hidden" name="form-name" value="bins-consultation" />
+        <input type="hidden" name="type" value="기업행사" />
         <p class="hidden"><label>비워두세요 <input name="bot-field" /></label></p>
-        <div>
-          <label class="block text-sm font-bold text-gray-700 mb-2">이름 <span class="text-red-500">*</span></label>
-          <input type="text" id="name" name="name" required placeholder="홍길동" class="w-full border-2 border-gray-200 rounded-xl px-4 py-3 text-gray-900 placeholder-gray-400 bg-white" />
-        </div>
-        <div>
-          <label class="block text-sm font-bold text-gray-700 mb-2">연락처 <span class="text-red-500">*</span></label>
-          <input type="tel" id="phone" name="phone" required placeholder="010-0000-0000" class="w-full border-2 border-gray-200 rounded-xl px-4 py-3 text-gray-900 placeholder-gray-400 bg-white" />
-        </div>
-        <div>
-          <label class="block text-sm font-bold text-gray-700 mb-2">이메일</label>
-          <input type="email" id="email" name="email" placeholder="답변 받을 이메일" class="w-full border-2 border-gray-200 rounded-xl px-4 py-3 text-gray-900 placeholder-gray-400 bg-white" />
-        </div>
-        <div>
-          <label class="block text-sm font-bold text-gray-700 mb-2">카카오톡 ID 또는 닉네임</label>
-          <input type="text" id="kakao" name="kakao" placeholder="카카오톡으로 연락받고 싶으면 입력" class="w-full border-2 border-gray-200 rounded-xl px-4 py-3 text-gray-900 placeholder-gray-400 bg-white" />
-        </div>
-        <div>
-          <label class="block text-sm font-bold text-gray-700 mb-2">희망 연락 방법</label>
-          <select id="contact_method" name="contact_method" class="w-full border-2 border-gray-200 rounded-xl px-4 py-3 text-gray-900 bg-white">
-            <option>전화 먼저</option>
-            <option>카카오톡 먼저</option>
-            <option>이메일 먼저</option>
-            <option>아무 방법이나 괜찮음</option>
-          </select>
-        </div>
-        <div>
-          <label class="block text-sm font-bold text-gray-700 mb-2">희망 레슨 <span class="text-red-500">*</span></label>
-          <select id="lesson_type" name="lesson_type" required class="w-full border-2 border-gray-200 rounded-xl px-4 py-3 text-gray-900 bg-white">
-            <option value="">레슨 종류를 선택해주세요</option>
-            <option value="입문반">입문반 (첫 시작, 기초부터)</option>
-            <option value="정규반">정규반 (실력 향상, 체계적 커리큘럼)</option>
-            <option value="프리미엄반">프리미엄반 (라운딩 동반 포함)</option>
-            <option value="무료상담">무료 상담 먼저 원합니다</option>
-          </select>
-        </div>
-        <div>
-          <label class="block text-sm font-bold text-gray-700 mb-2">현재 골프 경력</label>
-          <select id="experience" name="experience" class="w-full border-2 border-gray-200 rounded-xl px-4 py-3 text-gray-900 bg-white">
-            <option value="">선택해주세요</option>
-            <option>골프 처음 시작 (0~6개월)</option>
-            <option>초보 단계 (6개월~2년, 100타 이상)</option>
-            <option>중급 (2~5년, 90~100타)</option>
-            <option>중상급 (5년 이상, 80~90타)</option>
-            <option>상급 (싱글 도전 중)</option>
-          </select>
-        </div>
-        <div>
-          <label class="block text-sm font-bold text-gray-700 mb-2">추가 문의사항</label>
-          <textarea id="message" name="message" rows="3" placeholder="원하시는 레슨 스타일, 일정, 질문 사항 등 자유롭게 적어주세요" class="w-full border-2 border-gray-200 rounded-xl px-4 py-3 text-gray-900 placeholder-gray-400 bg-white resize-none"></textarea>
-        </div>
-        <button type="submit" class="w-full gold-bg text-white font-black py-4 rounded-xl text-lg hover:opacity-90 transition-all shadow-md">
-          무료 상담 신청하기 →
-        </button>
-        <p class="text-center text-gray-400 text-xs">신청 내용은 Netlify 상담폼으로 접수됩니다. 바로 문의는 카카오톡에서 ID susu5000을 검색하세요.</p>
+        <div><label class="block text-sm font-bold text-gray-700 mb-2">이름/회사명 <span class="text-red-500">*</span></label><input name="name" required placeholder="예: 홍길동 / ABC기업" class="w-full border-2 border-gray-200 rounded-xl px-4 py-3 bg-white" /></div>
+        <div><label class="block text-sm font-bold text-gray-700 mb-2">연락처 <span class="text-red-500">*</span></label><input name="phone" required placeholder="010-0000-0000" class="w-full border-2 border-gray-200 rounded-xl px-4 py-3 bg-white" /></div>
+        <div><label class="block text-sm font-bold text-gray-700 mb-2">이메일</label><input type="email" name="email" placeholder="답변 받을 이메일" class="w-full border-2 border-gray-200 rounded-xl px-4 py-3 bg-white" /></div>
+        <div><label class="block text-sm font-bold text-gray-700 mb-2">희망 행사</label><select name="event_type" class="w-full border-2 border-gray-200 rounded-xl px-4 py-3 bg-white"><option>전지훈련</option><option>기업 골프행사</option><option>1박2일 패키지</option><option>프로 섭외/동행 행사</option><option>아직 미정</option></select></div>
+        <div><label class="block text-sm font-bold text-gray-700 mb-2">예상 인원/일정</label><input name="schedule" placeholder="예: 20명 / 7월 중 / 1박2일" class="w-full border-2 border-gray-200 rounded-xl px-4 py-3 bg-white" /></div>
+        <div><label class="block text-sm font-bold text-gray-700 mb-2">문의 내용</label><textarea name="message" rows="4" placeholder="행사 목적, 희망 지역, 예산 범위, 필요한 운영 내용을 적어주세요" class="w-full border-2 border-gray-200 rounded-xl px-4 py-3 bg-white resize-none"></textarea></div>
+        <button type="submit" class="w-full gold-bg text-white font-black py-4 rounded-xl text-lg hover:opacity-90 transition-all shadow-md">행사 상담 신청하기 →</button>
         <div class="grid sm:grid-cols-2 gap-3">
           <a href="https://pf.kakao.com" target="_blank" rel="noopener" class="block text-center bg-yellow-300 text-gray-900 font-bold py-3 rounded-xl hover:bg-yellow-200 transition-all">카카오톡 ID susu5000 찾기</a>
-          <a href="mailto:lky3233@gmail.com?subject=빈스스포츠 무료 상담 문의" class="block text-center bg-white border-2 border-gray-200 text-gray-800 font-bold py-3 rounded-xl hover:bg-gray-50 transition-all">이메일로 바로 문의</a>
+          <a href="mailto:lky3233@gmail.com?subject=빈스스포츠 기업 골프행사 문의" class="block text-center bg-white border-2 border-gray-200 text-gray-800 font-bold py-3 rounded-xl hover:bg-gray-50 transition-all">이메일로 바로 문의</a>
         </div>
       </form>
-
-      <div id="form-success" class="hidden bg-green-50 border border-green-200 rounded-3xl p-10 text-center">
-        <div class="text-5xl mb-4">✅</div>
-        <h3 class="text-2xl font-black text-green-800 mb-2">신청이 완료됐습니다!</h3>
-        <p class="text-green-700">24시간 이내에 담당자가 연락드립니다.</p>
-        <a href="index.html" class="inline-block mt-6 text-green-800 font-bold underline">홈으로 돌아가기</a>
-      </div>
     </div>
   </section>
 
-  <!-- FAQ -->
-  <section class="py-8 md:py-20 bg-gray-50">
-    <div class="max-w-3xl mx-auto px-4">
-      <div class="text-center mb-6 md:mb-12">
-        <p class="text-yellow-600 font-bold text-sm uppercase tracking-widest mb-3">자주 묻는 질문</p>
-        <h2 class="text-3xl font-black">궁금한 점 먼저 확인하세요</h2>
-      </div>
-      <div class="space-y-4" id="faq">
-        <div class="bg-white rounded-2xl border border-gray-200 overflow-hidden">
-          <button class="faq-btn w-full text-left p-6 flex justify-between items-center font-bold text-gray-900" onclick="toggleFaq(this)">
-            <span>레슨 장소는 어디인가요?</span>
-            <span class="faq-icon text-yellow-500 text-xl">+</span>
-          </button>
-          <div class="faq-content hidden px-6 pb-6 text-gray-600 text-sm leading-relaxed">
-            수강생의 접근성을 고려해 수도권 주요 실내 골프 연습장에서 진행합니다. 신청 후 상담 시 가장 가까운 장소를 안내해드립니다.
-          </div>
-        </div>
-        <div class="bg-white rounded-2xl border border-gray-200 overflow-hidden">
-          <button class="faq-btn w-full text-left p-6 flex justify-between items-center font-bold text-gray-900" onclick="toggleFaq(this)">
-            <span>레슨 시간 변경이 가능한가요?</span>
-            <span class="faq-icon text-yellow-500 text-xl">+</span>
-          </button>
-          <div class="faq-content hidden px-6 pb-6 text-gray-600 text-sm leading-relaxed">
-            레슨 48시간 전까지 변경 요청 시 무료로 일정을 조정해드립니다. 카카오톡으로 말씀해주시면 됩니다.
-          </div>
-        </div>
-        <div class="bg-white rounded-2xl border border-gray-200 overflow-hidden">
-          <button class="faq-btn w-full text-left p-6 flex justify-between items-center font-bold text-gray-900" onclick="toggleFaq(this)">
-            <span>환불은 어떻게 되나요?</span>
-            <span class="faq-icon text-yellow-500 text-xl">+</span>
-          </button>
-          <div class="faq-content hidden px-6 pb-6 text-gray-600 text-sm leading-relaxed">
-            첫 레슨(무료 체험) 이후 등록비를 납부하시며, 등록 후 진행하지 않은 레슨에 대해서는 전액 환불이 가능합니다. 진행한 레슨은 회당 정가로 차감됩니다.
-          </div>
-        </div>
-        <div class="bg-white rounded-2xl border border-gray-200 overflow-hidden">
-          <button class="faq-btn w-full text-left p-6 flex justify-between items-center font-bold text-gray-900" onclick="toggleFaq(this)">
-            <span>골프채가 없어도 레슨 받을 수 있나요?</span>
-            <span class="faq-icon text-yellow-500 text-xl">+</span>
-          </button>
-          <div class="faq-content hidden px-6 pb-6 text-gray-600 text-sm leading-relaxed">
-            네, 처음 시작하시는 분들을 위해 레슨용 클럽을 제공해드립니다. 본인 클럽 구매는 어느 정도 기초를 잡은 후 프로와 상담해서 결정하시는 걸 추천드립니다.
-          </div>
-        </div>
-        <div class="bg-white rounded-2xl border border-gray-200 overflow-hidden">
-          <button class="faq-btn w-full text-left p-6 flex justify-between items-center font-bold text-gray-900" onclick="toggleFaq(this)">
-            <span>몇 번 레슨을 받아야 효과가 나나요?</span>
-            <span class="faq-icon text-yellow-500 text-xl">+</span>
-          </button>
-          <div class="faq-content hidden px-6 pb-6 text-gray-600 text-sm leading-relaxed">
-            개인차가 있지만, 보통 월 8회 정규반 기준 3개월이면 뚜렷한 변화를 느끼십니다. 첫 달부터 스윙 변화가 눈에 보이고, 3개월 후 라운딩 스코어에서 차이가 납니다.
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="bg-green-950 py-12 border-t border-green-900">
-    <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-6">
-      <a href="index.html" style="display:inline-block;background:#f2f0ec;border-radius:8px;padding:5px 14px;line-height:0;">
-          <img src="logo.png" alt="빈스 스포츠 마케팅" style="height:42px;width:auto;display:block;" />
-        </a>
-      <div class="flex gap-6 text-sm text-gray-400">
-        <a href="pro.html" class="hover:text-yellow-400">정민상 프로</a>
-        <a href="camp.html" class="hover:text-yellow-400">전지훈련</a>
-        <a href="package.html" class="hover:text-yellow-400">1박2일 패키지</a>
-        <a href="pros.html" class="hover:text-yellow-400">소속 프로</a>
-      </div>
-      <p class="text-gray-500 text-sm">© 2025 빈스 스포츠 마케팅</p>
-    </div>
+  <footer class="bg-green-950 py-12 text-center text-gray-400 text-sm">
+    <div class="mb-3"><a href="index.html" style="display:inline-block;background:#f2f0ec;border-radius:8px;padding:6px 16px;line-height:0;"><img src="logo.png" alt="빈스 스포츠 마케팅" style="height:38px;width:auto;display:block;" /></a></div>
+    <p>카카오톡 ID: susu5000 · 이메일: lky3233@gmail.com</p>
+    <p class="mt-2">© 2026 BINS Sports Marketing. All rights reserved.</p>
   </footer>
-
-  <script>
-    document.getElementById('mob-btn').addEventListener('click', function() {
-      document.getElementById('mob-menu').classList.toggle('hidden');
-    });
-    function toggleFaq(btn) {
-      const content = btn.nextElementSibling;
-      const icon = btn.querySelector('.faq-icon');
-      content.classList.toggle('hidden');
-      icon.textContent = content.classList.contains('hidden') ? '+' : '−';
-    }
-    function submitForm(e) {
-      e.preventDefault();
-      const f = document.getElementById('lessonForm');
-      saveApplication({
-        type: '레슨',
-        name: f.querySelector('#name').value,
-        phone: f.querySelector('#phone').value,
-        detail: f.querySelector('#lesson_type').value,
-        experience: f.querySelector('#experience').value,
-        message: f.querySelector('#message').value
-      });
-      f.reset();
-      showSuccessPopup('레슨');
-    }
-  </script>
-  <script src="bins-admin.js"></script>
 </body>
 </html>

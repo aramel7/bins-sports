@@ -54,7 +54,7 @@
           <div id="stat-total" class="text-3xl font-black text-gray-900">0</div>
         </div>
         <div class="bg-white rounded-2xl p-5 shadow-sm border border-gray-100">
-          <div class="text-gray-400 text-sm mb-1">레슨</div>
+          <div class="text-gray-400 text-sm mb-1">기업행사</div>
           <div id="stat-lesson" class="text-3xl font-black text-green-700">0</div>
         </div>
         <div class="bg-white rounded-2xl p-5 shadow-sm border border-gray-100">
@@ -70,7 +70,7 @@
       <!-- 필터 탭 -->
       <div class="flex gap-2 mb-6 flex-wrap">
         <button onclick="filterBy('전체')" class="filter-btn active bg-gray-900 text-white font-bold px-5 py-2 rounded-full text-sm">전체</button>
-        <button onclick="filterBy('레슨')" class="filter-btn bg-white text-gray-600 font-bold px-5 py-2 rounded-full text-sm border border-gray-200 hover:bg-gray-50">레슨</button>
+        <button onclick="filterBy('기업행사')" class="filter-btn bg-white text-gray-600 font-bold px-5 py-2 rounded-full text-sm border border-gray-200 hover:bg-gray-50">기업행사</button>
         <button onclick="filterBy('1박2일패키지')" class="filter-btn bg-white text-gray-600 font-bold px-5 py-2 rounded-full text-sm border border-gray-200 hover:bg-gray-50">1박2일 패키지</button>
         <button onclick="filterBy('전지훈련')" class="filter-btn bg-white text-gray-600 font-bold px-5 py-2 rounded-full text-sm border border-gray-200 hover:bg-gray-50">전지훈련</button>
         <button onclick="filterBy('신규')" class="filter-btn bg-red-50 text-red-600 font-bold px-5 py-2 rounded-full text-sm border border-red-200 hover:bg-red-100">🔴 신규만</button>
@@ -150,7 +150,7 @@
     }
 
     function typeLabel(type) {
-      const map = { '레슨': ['bg-green-100 text-green-800', '레슨'], '1박2일패키지': ['bg-amber-100 text-amber-800', '1박2일 패키지'], '전지훈련': ['bg-blue-100 text-blue-800', '전지훈련'] };
+      const map = { '기업행사': ['bg-green-100 text-green-800', '기업행사'], '1박2일패키지': ['bg-amber-100 text-amber-800', '1박2일 패키지'], '전지훈련': ['bg-blue-100 text-blue-800', '전지훈련'] };
       const [cls, label] = map[type] || ['bg-gray-100 text-gray-700', type];
       return `<span class="inline-block ${cls} text-xs font-bold px-2.5 py-1 rounded-full">${label}</span>`;
     }
@@ -176,7 +176,7 @@
     function renderDashboard() {
       const apps = getApps();
       document.getElementById('stat-total').textContent = apps.length;
-      document.getElementById('stat-lesson').textContent = apps.filter(a => a.type === '레슨').length;
+      document.getElementById('stat-lesson').textContent = apps.filter(a => a.type === '기업행사').length;
       document.getElementById('stat-pkg').textContent = apps.filter(a => a.type === '1박2일패키지').length;
       document.getElementById('stat-camp').textContent = apps.filter(a => a.type === '전지훈련').length;
       const newCount = apps.filter(a => a.status === '신규').length;
