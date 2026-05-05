@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>프로진 소개 | 빈스 스포츠 마케팅</title>
-  <meta name="description" content="빈스 스포츠 마케팅 전지훈련·기업행사·패키지 행사에 함께하는 프로진 소개. 정민상 헤드프로와 KLPGA/KPGA 프로진." />
+  <meta name="description" content="빈스 스포츠 마케팅 전지훈련·기업행사·1박2일 패키지 행사에 함께하는 KPGA/KLPGA 프로진 소개." />
   <meta property="og:title" content="프로진 소개 | 빈스 스포츠 마케팅" />
   <meta property="og:description" content="전지훈련 · 기업행사 · 1박2일 패키지 행사 전문 프로진" />
   <meta property="og:type" content="website" />
@@ -13,17 +13,22 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet" />
   <style>
-    body { font-family: 'Noto Sans KR', sans-serif; }
-    .hero-bg { background: linear-gradient(135deg, #052e16 0%, #166534 60%, #052e16 100%); }
-    .gold-bg { background: linear-gradient(135deg, #a07d10, #c9a227, #e6c458); }
-    .card-hover { transition: all .25s ease; }
-    .card-hover:hover { transform: translateY(-5px); box-shadow: 0 18px 36px rgba(0,0,0,.12); }
+    :root{--green:#052e16;--green2:#14532d;--gold:#d6ad31;--ink:#111827}
+    body{font-family:'Noto Sans KR',sans-serif;background:#f7f8f5;color:var(--ink)}
+    .gold-bg{background:linear-gradient(135deg,#a07d10,#c9a227,#e6c458)}
+    .hero-luxe{background:radial-gradient(circle at 14% 10%,rgba(214,173,49,.24),transparent 32%),radial-gradient(circle at 82% 22%,rgba(34,197,94,.18),transparent 30%),linear-gradient(135deg,#031a0d 0%,#052e16 44%,#123f24 100%)}
+    .glass{background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.16);box-shadow:0 24px 80px rgba(0,0,0,.22);backdrop-filter:blur(16px)}
+    .pro-card{transition:transform .28s ease,box-shadow .28s ease,border-color .28s ease}
+    .pro-card:hover{transform:translateY(-7px);box-shadow:0 28px 60px rgba(15,23,42,.14);border-color:rgba(214,173,49,.55)}
+    .portrait{aspect-ratio:4/5;object-fit:cover;object-position:center top}
+    .vertical-writing{writing-mode:vertical-rl;letter-spacing:.12em}
+    .shine{position:relative;overflow:hidden}.shine:before{content:"";position:absolute;inset:-40%;background:linear-gradient(120deg,transparent 42%,rgba(255,255,255,.24),transparent 58%);transform:translateX(-70%) rotate(8deg);transition:transform .7s ease}.shine:hover:before{transform:translateX(70%) rotate(8deg)}
   </style>
 </head>
-<body class="bg-white text-gray-900">
+<body>
   <nav class="fixed top-0 left-0 right-0 z-50 bg-green-950/95 backdrop-blur-md border-b border-green-900">
     <div class="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
-      <a href="index.html" style="display:inline-block;background:#f2f0ec;border-radius:8px;padding:5px 14px;line-height:0;"><img src="logo.png" alt="빈스 스포츠 마케팅" style="height:42px;width:auto;display:block;" /></a>
+      <a href="index.html" class="inline-block bg-stone-100 rounded-lg px-3 py-1 leading-none"><img src="logo.png" alt="빈스 스포츠 마케팅" class="h-11 w-auto block" /></a>
       <div class="hidden md:flex items-center gap-7 text-sm">
         <a href="golfzone.html" class="text-gray-300 hover:text-white">골프존파크</a>
         <a href="pro.html" class="text-gray-300 hover:text-white">헤드프로</a>
@@ -36,67 +41,118 @@
     </div>
   </nav>
 
-  <section class="hero-bg pt-32 pb-20 text-center">
-    <div class="max-w-4xl mx-auto px-4">
-      <div class="inline-flex items-center gap-2 bg-yellow-400/20 border border-yellow-400/30 rounded-full px-4 py-2 mb-6">
-        <span class="text-yellow-400 text-sm font-bold">BINS PROFESSIONAL TEAM</span>
+  <section class="hero-luxe relative overflow-hidden pt-32 pb-20 md:pb-28">
+    <div class="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-[#f7f8f5] to-transparent"></div>
+    <div class="max-w-7xl mx-auto px-4 relative">
+      <div class="grid lg:grid-cols-[1.05fr_.95fr] gap-10 items-center">
+        <div>
+          <div class="inline-flex items-center gap-2 bg-yellow-400/15 border border-yellow-300/30 rounded-full px-4 py-2 mb-6">
+            <span class="w-2 h-2 rounded-full bg-yellow-300"></span>
+            <span class="text-yellow-200 text-sm font-black tracking-[.18em]">BINS PROFESSIONAL TEAM</span>
+          </div>
+          <h1 class="text-4xl md:text-7xl font-black text-white leading-[1.05] mb-7">행사의 품격은<br><span class="text-yellow-300">프로진</span>에서 결정됩니다</h1>
+          <p class="text-lg md:text-xl text-emerald-50/85 leading-relaxed max-w-2xl">전지훈련, 기업 골프행사, 1박2일 패키지 운영에 맞춰 투어 경험과 교육 경험을 갖춘 프로진이 현장 분위기와 완성도를 함께 만듭니다.</p>
+          <div class="mt-8 flex flex-wrap gap-3">
+            <span class="glass text-white px-4 py-3 rounded-2xl text-sm font-bold">전지훈련 코칭</span>
+            <span class="glass text-white px-4 py-3 rounded-2xl text-sm font-bold">기업행사 진행</span>
+            <span class="glass text-white px-4 py-3 rounded-2xl text-sm font-bold">VIP 패키지 운영</span>
+          </div>
+        </div>
+        <div class="glass rounded-[2rem] p-4 md:p-5 shine">
+          <div class="grid grid-cols-[1fr_.62fr] gap-4">
+            <img src="pro-gallery-portrait.jpg" alt="빈스 스포츠 프로진 이미지" class="rounded-[1.5rem] portrait w-full h-full" />
+            <div class="flex flex-col gap-4">
+              <img src="pro-gallery-swing.jpg" alt="빈스 스포츠 프로진 스윙 이미지" class="rounded-[1.5rem] object-cover h-56 md:h-72 w-full" />
+              <div class="rounded-[1.5rem] gold-bg p-5 text-white min-h-32 flex items-end">
+                <div>
+                  <p class="text-xs font-black tracking-[.2em] opacity-80">CURATED TEAM</p>
+                  <p class="text-2xl font-black leading-tight">행사 목적별<br>프로 구성</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <h1 class="text-4xl md:text-6xl font-black text-white leading-tight mb-6">행사의 품격을 만드는<br><span class="text-yellow-400">프로진</span></h1>
-      <p class="text-gray-300 text-xl leading-relaxed">전지훈련·기업행사·1박2일 패키지 운영에 맞춘 프로진입니다.</p>
     </div>
   </section>
 
-  <section class="py-14 md:py-24 bg-gray-50">
+  <section class="py-16 md:py-24">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-5 mb-10">
+        <div>
+          <p class="text-yellow-700 font-black tracking-[.18em] text-sm mb-2">PRO LINEUP</p>
+          <h2 class="text-3xl md:text-5xl font-black text-gray-950">빈스 스포츠 프로진</h2>
+        </div>
+        <p class="text-gray-500 max-w-xl leading-relaxed">대표님이 제공한 프로소개 자료를 기준으로 반영했습니다. 개인정보성 연락처는 홈페이지에 노출하지 않고, 행사 제안에 필요한 경력 중심으로 정리했습니다.</p>
+      </div>
+
+      <div class="grid lg:grid-cols-2 gap-6">
+        <article class="pro-card bg-green-950 text-white rounded-[2rem] overflow-hidden border border-green-900 shadow-sm">
+          <div class="grid md:grid-cols-[.82fr_1.18fr] h-full">
+            <div class="relative bg-black/20 min-h-80"><img src="pro-jms2.png" alt="정민상 프로" class="absolute inset-0 w-full h-full object-cover object-top opacity-95" /><div class="absolute top-5 left-5 vertical-writing text-yellow-200 text-xs font-black">HEAD PROFESSIONAL</div></div>
+            <div class="p-7 md:p-9 flex flex-col justify-between">
+              <div><p class="text-yellow-300 font-black mb-2">KPGA 정회원 · Head Pro</p><h3 class="text-3xl font-black mb-4">정민상 프로</h3><p class="text-emerald-50/80 leading-relaxed">전지훈련과 패키지 행사의 전체 코칭 방향을 잡는 헤드프로. 현장 운영, 팀 구성, 실전 코칭 흐름을 총괄합니다.</p></div>
+              <div class="mt-7 flex flex-wrap gap-2"><span class="bg-white/10 text-yellow-200 px-3 py-1 rounded-full text-xs font-bold">행사 총괄</span><span class="bg-white/10 text-yellow-200 px-3 py-1 rounded-full text-xs font-bold">숏게임</span><span class="bg-white/10 text-yellow-200 px-3 py-1 rounded-full text-xs font-bold">전지훈련</span></div>
+            </div>
+          </div>
+        </article>
+
+        <article class="pro-card bg-white rounded-[2rem] overflow-hidden border border-gray-200 shadow-sm">
+          <div class="grid md:grid-cols-[.82fr_1.18fr] h-full">
+            <div class="relative bg-emerald-950 min-h-80"><img src="pro-jjw-action.jpg" alt="정주원 프로" class="absolute inset-0 w-full h-full object-cover object-center" /><div class="absolute inset-x-0 bottom-0 p-5 bg-gradient-to-t from-black/70 to-transparent text-white"><p class="text-xs font-black tracking-[.18em]">TOUR PRO</p></div></div>
+            <div class="p-7 md:p-9">
+              <p class="text-yellow-700 font-black mb-2">LPGA · KLPGA 투어프로</p><h3 class="text-3xl font-black mb-4">정주원 프로</h3>
+              <p class="text-gray-600 leading-relaxed mb-5">마스터 프로페셔널로 소개된 투어 프로. 20년 이상 필드 아카데미 코칭 경험을 바탕으로 초보자부터 VIP 고객까지 수준별 퍼포먼스 코칭을 진행해온 이력이 있습니다.</p>
+              <ul class="space-y-2 text-sm text-gray-700">
+                <li>• 삼성 인어스 골프아카데미 코칭</li><li>• 광화문 보이스캐디 골프아카데미 코칭</li><li>• 더클래식 500 펜타즈 호텔, 제주 엘리시안 CC 등 VIP 코칭 경력</li>
+              </ul>
+            </div>
+          </div>
+        </article>
+
+        <article class="pro-card bg-white rounded-[2rem] overflow-hidden border border-gray-200 shadow-sm">
+          <div class="grid md:grid-cols-[.82fr_1.18fr] h-full">
+            <div class="relative bg-stone-100 min-h-80"><img src="pro-khg-profile.jpg" alt="김희강 프로 프로필" class="absolute inset-0 w-full h-full object-cover object-left-top" /></div>
+            <div class="p-7 md:p-9">
+              <p class="text-yellow-700 font-black mb-2">KLPGA Master Professional</p><h3 class="text-3xl font-black mb-4">김희강 프로</h3>
+              <p class="text-gray-600 leading-relaxed mb-5">2004년 KLPGA 입회. 대학 강의와 CEO 골프아카데미, 캠프 소속프로, 기업형 골프 프로그램 경험을 두루 갖춘 교육형 프로입니다.</p>
+              <ul class="space-y-2 text-sm text-gray-700">
+                <li>• 경북대학교 석사 / 생활스포츠지도사 2급</li><li>• 대경 CEO 골프아카데미 총괄프로</li><li>• H.GOLF 아카데미 대표 / KLPGA 챔피언스 투어 프로</li>
+              </ul>
+            </div>
+          </div>
+        </article>
+
+        <article class="pro-card bg-white rounded-[2rem] overflow-hidden border border-gray-200 shadow-sm">
+          <div class="grid md:grid-cols-[.82fr_1.18fr] h-full">
+            <div class="relative bg-slate-900 min-h-80 p-5 flex items-center"><img src="pro-ku-career.jpg" alt="구현진 프로 경력 자료" class="rounded-2xl w-full max-h-[25rem] object-contain bg-white shadow-xl" /></div>
+            <div class="p-7 md:p-9">
+              <p class="text-yellow-700 font-black mb-2">KLPGA 정회원 · 챔피언스 투어</p><h3 class="text-3xl font-black mb-4">구현진 프로</h3>
+              <p class="text-gray-600 leading-relaxed mb-5">KLPGA/JLPGA 2부투어와 KLPGA 정규투어, 챔피언스 투어 경험을 보유한 프로. 아카데미 운영과 고등학교 골프 수업 강사 이력까지 갖췄습니다.</p>
+              <ul class="space-y-2 text-sm text-gray-700">
+                <li>• 2001년 9월 KLPGA 정회원 입회</li><li>• 2006~2007 KLPGA 정규투어 출전</li><li>• 2025 챔피언스투어 상금랭킹 16위</li>
+              </ul>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 bg-white">
     <div class="max-w-6xl mx-auto px-4">
-      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-        <div class="bg-green-950 text-white rounded-3xl p-7 card-hover">
-          <div class="w-24 h-24 rounded-full border-4 border-yellow-400/60 mx-auto mb-5 overflow-hidden"><img src="pro-jms2.png" alt="정민상 프로" class="w-full h-full object-cover object-top" /></div>
-          <h3 class="text-xl font-black text-center mb-1">정민상 프로</h3>
-          <p class="text-yellow-400 text-sm text-center mb-4">Head Pro · KPGA 정회원</p>
-          <div class="flex flex-wrap gap-2 justify-center mb-5"><span class="bg-yellow-400/20 text-yellow-300 text-xs px-3 py-1 rounded-full">행사 총괄</span><span class="bg-yellow-400/20 text-yellow-300 text-xs px-3 py-1 rounded-full">숏게임</span></div>
-          <p class="text-gray-300 text-sm text-center leading-relaxed">전지훈련과 패키지 행사의 전체 코칭 방향을 잡는 헤드프로. 현장 운영과 실전 코칭을 총괄합니다.</p>
-        </div>
-
-        <div class="bg-white rounded-3xl p-7 shadow-sm border border-gray-100 card-hover">
-          <div class="w-24 h-24 rounded-full bg-emerald-100 border-4 border-emerald-200 flex items-center justify-center text-4xl mx-auto mb-5">🏆</div>
-          <h3 class="text-xl font-black text-center mb-1 text-gray-900">정주원 프로</h3>
-          <p class="text-yellow-600 text-sm text-center mb-4">KLPGA 투어프로</p>
-          <div class="flex flex-wrap gap-2 justify-center mb-5"><span class="bg-emerald-100 text-emerald-700 text-xs px-3 py-1 rounded-full">국가대표 상비군 출신</span><span class="bg-blue-100 text-blue-700 text-xs px-3 py-1 rounded-full">투어 경험</span></div>
-          <p class="text-gray-500 text-sm text-center leading-relaxed mb-4">공개 자료 기준 KLPGA 투어프로이며, 국가대표 상비군 출신. 2014 오렌지볼 주니어 세계선수권 여자부 우승, KLPGA 정규투어·드림투어 활동 이력이 확인됩니다.</p>
-          <p class="text-xs text-gray-400 text-center">출처: KLPGA/SportsW/공개 SNS 검색 결과</p>
-        </div>
-
-        <div class="bg-white rounded-3xl p-7 shadow-sm border border-gray-100 card-hover">
-          <div class="w-24 h-24 rounded-full bg-amber-100 border-4 border-amber-200 flex items-center justify-center text-4xl mx-auto mb-5">🎤</div>
-          <h3 class="text-xl font-black text-center mb-1 text-gray-900">김희강 프로</h3>
-          <p class="text-yellow-600 text-sm text-center mb-4">KLPGA 프로 · 마스터 프로페셔널</p>
-          <div class="flex flex-wrap gap-2 justify-center mb-5"><span class="bg-amber-100 text-amber-700 text-xs px-3 py-1 rounded-full">기업체 골프 특강</span><span class="bg-purple-100 text-purple-700 text-xs px-3 py-1 rounded-full">아카데미 운영</span></div>
-          <p class="text-gray-500 text-sm text-center leading-relaxed mb-4">KLPGA 공식 블로그 기준 2004년 KLPGA 투어 입회. 대학 골프 수업, CEO 골프아카데미 지도교수, 기업체 골프 특강 등 교육·행사형 골프 프로그램 경험이 확인됩니다.</p>
-          <p class="text-xs text-gray-400 text-center">출처: KLPGA 공식블로그/공개 SNS 검색 결과</p>
-        </div>
-
-        <div class="bg-white rounded-3xl p-7 shadow-sm border border-gray-100 card-hover">
-          <div class="w-24 h-24 rounded-full bg-sky-100 border-4 border-sky-200 flex items-center justify-center text-4xl mx-auto mb-5">⛳</div>
-          <h3 class="text-xl font-black text-center mb-1 text-gray-900">구현진 프로</h3>
-          <p class="text-yellow-600 text-sm text-center mb-4">KLPGA 프로</p>
-          <div class="flex flex-wrap gap-2 justify-center mb-5"><span class="bg-sky-100 text-sky-700 text-xs px-3 py-1 rounded-full">행사 코칭</span><span class="bg-green-100 text-green-700 text-xs px-3 py-1 rounded-full">필드 운영</span></div>
-          <p class="text-gray-500 text-sm text-center leading-relaxed mb-4">대표님 제공 명단 기준 홈페이지 프로진에 우선 반영했습니다. 세부 공식 이력은 추가 확인 후 업데이트하겠습니다.</p>
-          <p class="text-xs text-gray-400 text-center">세부 이력 확인 예정</p>
+      <div class="rounded-[2rem] bg-gradient-to-br from-green-950 via-green-900 to-emerald-800 p-8 md:p-12 text-white overflow-hidden relative">
+        <div class="absolute -right-16 -top-16 w-56 h-56 rounded-full bg-yellow-300/20 blur-2xl"></div>
+        <div class="relative grid md:grid-cols-[1fr_auto] gap-8 items-center">
+          <div><p class="text-yellow-300 font-black tracking-[.18em] text-sm mb-3">BINS EVENT SYSTEM</p><h2 class="text-3xl md:text-5xl font-black mb-4">프로 섭외부터 현장 운영까지<br>행사 목적에 맞춰 구성합니다</h2><p class="text-emerald-50/80 leading-relaxed">전지훈련, 기업 임직원 행사, 1박2일 패키지, VIP 초청 행사 등 목적과 인원에 맞춰 가장 자연스러운 프로진 구성을 제안드립니다.</p></div>
+          <a href="lesson.html#apply" class="gold-bg text-white font-black px-9 py-4 rounded-full text-lg hover:opacity-90 whitespace-nowrap">행사 상담하기 →</a>
         </div>
       </div>
-    </div>
-  </section>
-
-  <section class="py-16 bg-green-950 text-center">
-    <div class="max-w-3xl mx-auto px-4">
-      <h2 class="text-3xl md:text-4xl font-black text-white mb-5">전지훈련이나 기업행사에<br>프로 동행이 필요하신가요?</h2>
-      <p class="text-gray-300 mb-8">행사 목적, 인원, 일정에 맞춰 프로 구성과 운영 방식을 제안드립니다.</p>
-      <a href="lesson.html#apply" class="gold-bg text-white font-bold px-10 py-4 rounded-full text-lg hover:opacity-90">행사 상담하기 →</a>
     </div>
   </section>
 
   <footer class="bg-green-950 py-12 border-t border-green-900 text-center text-gray-400 text-sm">
-    <div class="mb-3"><a href="index.html" style="display:inline-block;background:#f2f0ec;border-radius:8px;padding:6px 16px;line-height:0;"><img src="logo.png" alt="빈스 스포츠 마케팅" style="height:38px;width:auto;display:block;" /></a></div>
+    <div class="mb-3"><a href="index.html" class="inline-block bg-stone-100 rounded-lg px-4 py-2 leading-none"><img src="logo.png" alt="빈스 스포츠 마케팅" class="h-10 w-auto block" /></a></div>
     <p>카카오톡 ID: susu5000 · 이메일: lky3233@gmail.com</p>
   </footer>
 </body>
