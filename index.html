@@ -109,12 +109,20 @@
   .tag-green{background:rgba(150,220,140,.2);color:#d6ffce}
   .tag-amber{background:rgba(240,180,90,.2);color:#ffd9a0}
   .tag-gold{background:rgba(230,196,88,.22);color:var(--gold2)}
-  .c-main{grid-column:span 7;grid-row:span 2;background:linear-gradient(160deg,#0b1f5e 0%,#0a3a22 120%)}
+  .c-main{grid-column:span 6;grid-row:span 2;background:linear-gradient(160deg,#0b1f5e 0%,#0a3a22 120%)}
   .c-main h3{font-size:30px}.c-main .price .n{font-size:58px}
-  .c-entry{grid-column:span 5;background:linear-gradient(150deg,#0f5132,#0a3a22)}
-  .c-food{grid-column:span 5;background:linear-gradient(150deg,#3a1f0c,#140b04)}
-  .c-cup{grid-column:span 5;background:linear-gradient(150deg,#1a4d2e,#0a3a22)}
-  .c-rev{grid-column:span 7;background:linear-gradient(120deg,#0a3a22,#04140c);flex-direction:row;align-items:center;gap:18px;cursor:default}
+  .c-rental{grid-column:span 6;grid-row:span 2;background:linear-gradient(160deg,#102a52 0%,#0a2e26 120%)}
+  .c-rental h3{font-size:30px}
+  .rental-price{display:flex;flex-direction:column;gap:7px;margin-top:14px}
+  .rental-price .rp{display:flex;align-items:baseline;gap:9px}
+  .rental-price .rp b{font-size:12.5px;font-weight:800;color:var(--gold2);background:rgba(201,162,39,.16);padding:3px 11px;border-radius:8px;min-width:48px;text-align:center}
+  .rental-price .rp .n2{font-size:30px;font-weight:800;letter-spacing:-.03em;line-height:1}
+  .rental-price .rp .u2{font-size:13px;font-weight:700;color:rgba(238,243,239,.82)}
+  .tag-teal{background:rgba(120,200,190,.2);color:#bdeee6}
+  .c-entry{grid-column:span 4;background:linear-gradient(150deg,#0f5132,#0a3a22)}
+  .c-food{grid-column:span 4;background:linear-gradient(150deg,#3a1f0c,#140b04)}
+  .c-cup{grid-column:span 4;background:linear-gradient(150deg,#1a4d2e,#0a3a22)}
+  .c-rev{grid-column:span 12;background:linear-gradient(120deg,#0a3a22,#04140c);flex-direction:row;align-items:center;gap:18px;cursor:default}
   .c-rev .revstar{font-size:34px;flex:none;line-height:1}
   .c-rev blockquote{margin:0}
   .c-rev .quote{font-size:18px;font-weight:800;letter-spacing:-.02em;line-height:1.3}
@@ -208,7 +216,7 @@
     .brand{font-size:15.5px;white-space:nowrap}.brand .mark{width:30px;height:30px}
     .bento{grid-auto-rows:auto;grid-template-columns:1fr}
     .card{grid-column:auto!important;grid-row:auto!important;min-height:170px}
-    .c-main{min-height:230px}
+    .c-main,.c-rental{min-height:240px}
     .strip{grid-template-columns:1fr 1fr}
     .lesson-grid,.price-grid,.loc-grid{grid-template-columns:1fr}
     .mcta{display:flex}
@@ -293,6 +301,20 @@
           <h3>골린이 입문 이벤트<br>8회 집중 레슨</h3>
           <span class="desc">최신 NX로 제대로 시작. 장비는 모두 준비되어 있어요.</span>
           <span class="price"><span class="n">199,000</span><span class="u">원</span></span>
+          <span class="go">자세히 보기 →</span>
+        </span>
+      </button>
+
+      <button class="card c-rental" onclick="openModal('m-rental')" aria-label="무제한 룸대여 이벤트 자세히 보기">
+        <span class="card-bgimg" data-bg="media/rental-room.jpg" style="opacity:.4" aria-hidden="true"></span>
+        <span class="card-top"><span class="tag tag-teal">단체·모임 환영 · 무제한 룸대여</span></span>
+        <span class="card-body">
+          <h3>우리끼리 하루 종일<br>스크린골프</h3>
+          <span class="desc">오전 10시~밤 12시 · 인원·게임 수 제한 없음</span>
+          <span class="rental-price">
+            <span class="rp"><b>평일</b><span class="n2">149,000</span><span class="u2">원</span></span>
+            <span class="rp"><b>주말</b><span class="n2">199,000</span><span class="u2">원</span></span>
+          </span>
           <span class="go">자세히 보기 →</span>
         </span>
       </button>
@@ -481,6 +503,24 @@
     <div class="mfoot">
       <a href="tel:010-9898-5000" class="m-primary"><span aria-hidden="true">📞</span> 010-9898-5000 (프로 문의)</a>
       <a href="tel:042-823-0753" class="m-second">042-823-0753</a>
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="m-rental" onclick="bgClose(event,'m-rental')">
+  <div class="sheet" role="dialog" aria-modal="true" aria-labelledby="m-rental-t">
+    <button class="x" onclick="closeModal('m-rental')" aria-label="닫기">✕</button>
+    <span class="mtag">단체·모임 환영 · 무제한 룸대여</span>
+    <h3 id="m-rental-t">우리끼리 하루 종일 스크린골프</h3>
+    <img class="mimg" src="media/event-rental.png" alt="무제한 룸 대여 이벤트 - 오전 10시부터 밤 12시까지, 인원·게임 수 제한 없이 평일 149,000원 주말 199,000원" loading="lazy" />
+    <ul class="mlist">
+      <li>오전 10시 ~ 밤 12시 · 하루 종일 무제한</li>
+      <li>인원수 제한 없음 · 게임수 제한 없음</li>
+      <li>평일 149,000원 · 주말 199,000원</li>
+      <li>모임 · 친목 · 연습 · 게임까지 편하게 오래</li>
+    </ul>
+    <div class="mfoot">
+      <a href="tel:042-823-0753" class="m-primary"><span aria-hidden="true">📞</span> 042-823-0753 예약 문의</a>
     </div>
   </div>
 </div>
