@@ -164,11 +164,12 @@
   .loc-row .lt{font-weight:800;font-size:15px;margin-bottom:3px}
   .loc-row .ld{color:var(--mut);font-size:14px;line-height:1.55}
   .loc-row .ld a{color:var(--gold2);font-weight:700}
-  .yakdo{border-radius:18px;overflow:hidden;border:1px solid var(--hair);background:linear-gradient(160deg,#0a2417,#06160d)}
-  .yakdo svg{width:100%;height:auto;display:block}
-  .yakdo-cap{font-size:12.5px;color:var(--mut);text-align:center;padding:10px 12px 12px;border-top:1px solid var(--hair);line-height:1.4}
-  .map-cta{display:flex;gap:10px;margin-top:12px}
-  .map-cta a{flex:1;display:inline-flex;align-items:center;justify-content:center;gap:7px;padding:14px;border-radius:13px;font-weight:800;font-size:14.5px}
+  .map-card{border:1px solid var(--hair);border-radius:18px;background:linear-gradient(160deg,#0a2417,#06160d);padding:40px 30px;text-align:center}
+  .map-card .map-ic{width:62px;height:62px;margin:0 auto 16px;border-radius:16px;background:rgba(201,162,39,.14);border:1px solid var(--line);display:grid;place-items:center;font-size:28px}
+  .map-card h3{font-size:20px;font-weight:800;letter-spacing:-.02em}
+  .map-card p{color:var(--mut);font-size:14px;line-height:1.65;margin-top:9px}
+  .map-cta{display:flex;gap:10px;margin-top:24px}
+  .map-cta a{flex:1;display:inline-flex;align-items:center;justify-content:center;gap:7px;padding:15px;border-radius:13px;font-weight:800;font-size:14.5px}
   .map-cta .nv{background:#03c75a;color:#05351c}
   .map-cta .kk{background:#fae100;color:#3a2e00}
   .map-cta a:hover{filter:brightness(1.04)}
@@ -233,6 +234,7 @@
     h1{font-size:38px}.strip{grid-template-columns:1fr}
     .eyebrow{letter-spacing:.04em;font-size:11px;padding:6px 12px}
     .c-rev{flex-direction:column;align-items:flex-start;gap:10px}
+    .map-cta{flex-direction:column}
   }
   @media(prefers-reduced-motion:reduce){
     *{animation:none!important;scroll-behavior:auto!important}
@@ -455,57 +457,14 @@
         <div class="loc-row"><div class="loc-ic" aria-hidden="true">🚗</div><div><div class="lt">주차</div><div class="ld">건물 지하주차장 / 협소 시 BMW 맞은편 대원주차장</div></div></div>
       </div>
       <div class="loc-map">
-        <div class="yakdo">
-          <svg viewBox="0 0 600 430" role="img" aria-label="찾아오는 길 약도: 동서대로변, 라도무스 아트센터 웨딩홀(서쪽)과 도안어울림하트 12단지(동쪽) 사이, 원신흥남로12번길 골프존파크 도안빈스 건물 5층, 옥녀봉지하차도 방면">
-            <defs>
-              <linearGradient id="gld" x1="0" y1="0" x2="1" y2="1">
-                <stop offset="0" stop-color="#e6c458"/><stop offset="1" stop-color="#c9a227"/>
-              </linearGradient>
-              <filter id="bglow" x="-30%" y="-30%" width="160%" height="160%">
-                <feDropShadow dx="0" dy="0" stdDeviation="11" flood-color="#e6c458" flood-opacity="0.45"/>
-              </filter>
-            </defs>
-            <text x="28" y="36" fill="#e6c458" font-size="15" font-weight="800" font-family="Pretendard,sans-serif">찾아오는 길</text>
-
-            <rect x="0" y="104" width="600" height="40" fill="#13241b"/>
-            <line x1="0" y1="124" x2="600" y2="124" stroke="#c9a227" stroke-width="2.5" stroke-dasharray="14 12" opacity="0.5"/>
-            <text x="476" y="130" fill="#9fb0a6" font-size="12" text-anchor="middle" font-family="Pretendard,sans-serif">원신흥남로 12번길</text>
-
-            <rect x="175" y="150" width="235" height="94" rx="16" fill="url(#gld)" filter="url(#bglow)"/>
-            <g transform="translate(193,182)">
-              <path d="M12 0 C5 0 0 5 0 12 C0 21 12 34 12 34 C12 34 24 21 24 12 C24 5 19 0 12 0 Z" fill="#1a1305"/>
-              <circle cx="12" cy="12" r="5" fill="#e6c458"/>
-            </g>
-            <text x="305" y="196" fill="#1a1305" font-size="18" font-weight="800" text-anchor="middle" font-family="Pretendard,sans-serif">골프존파크 도안빈스</text>
-            <text x="305" y="222" fill="#3a2e08" font-size="13.5" font-weight="700" text-anchor="middle" font-family="Pretendard,sans-serif">바로 이 건물 · 5층</text>
-
-            <rect x="438" y="158" width="140" height="74" rx="13" fill="#edeff3" stroke="#cfd4dd"/>
-            <text x="508" y="190" fill="#10233f" font-size="13.5" font-weight="800" text-anchor="middle" font-family="Pretendard,sans-serif">도안어울림하트</text>
-            <text x="508" y="212" fill="#3a4a66" font-size="12" text-anchor="middle" font-family="Pretendard,sans-serif">12단지 아파트</text>
-
-            <rect x="272" y="244" width="42" height="80" fill="#13241b"/>
-            <line x1="293" y1="244" x2="293" y2="322" stroke="#c9a227" stroke-width="2.5" stroke-dasharray="10 9" opacity="0.5"/>
-
-            <rect x="34" y="252" width="184" height="58" rx="12" fill="#edeff3" stroke="#cfd4dd"/>
-            <text x="126" y="279" fill="#10233f" font-size="13" font-weight="800" text-anchor="middle" font-family="Pretendard,sans-serif">라도무스 아트센터</text>
-            <text x="126" y="299" fill="#3a4a66" font-size="12.5" text-anchor="middle" font-family="Pretendard,sans-serif">웨딩홀</text>
-
-            <rect x="0" y="322" width="600" height="58" fill="#13241b"/>
-            <line x1="0" y1="351" x2="600" y2="351" stroke="#c9a227" stroke-width="3" stroke-dasharray="16 14" opacity="0.5"/>
-            <text x="116" y="356" fill="#e6c458" font-size="14" font-weight="800" text-anchor="middle" font-family="Pretendard,sans-serif">동서대로</text>
-
-            <rect x="263" y="300" width="60" height="24" rx="12" fill="#e6c458"/>
-            <text x="293" y="316" fill="#1a1305" font-size="12" font-weight="800" text-anchor="middle" font-family="Pretendard,sans-serif">진입</text>
-
-            <rect x="420" y="328" width="160" height="46" rx="11" fill="#0f2a1d" stroke="#c9a227" stroke-opacity="0.4"/>
-            <text x="500" y="349" fill="#d6ffe6" font-size="12.5" font-weight="700" text-anchor="middle" font-family="Pretendard,sans-serif">옥녀봉지하차도</text>
-            <text x="500" y="366" fill="#8fb0a0" font-size="11" text-anchor="middle" font-family="Pretendard,sans-serif">동쪽 방면 →</text>
-          </svg>
-          <div class="yakdo-cap"><b style="color:var(--gold2)">라도무스웨딩홀</b>(서) · <b style="color:var(--gold2)">어울림하트12단지</b>(동) 사이 · 동서대로변 · 건물 5층 (옥녀봉지하차도 방면)</div>
-        </div>
-        <div class="map-cta">
-          <a class="nv" href="https://map.naver.com/p/search/골프존파크 도안빈스/place/1773887520" target="_blank" rel="noopener">네이버 지도 길찾기 →</a>
-          <a class="kk" href="https://map.kakao.com/?q=대전 유성구 원신흥남로12번길 42" target="_blank" rel="noopener">카카오맵 →</a>
+        <div class="map-card">
+          <div class="map-ic" aria-hidden="true">📍</div>
+          <h3>지도 앱에서 길 안내받기</h3>
+          <p>버튼을 누르면 지도 앱이 열려<br>현위치부터 정확한 길찾기가 됩니다.</p>
+          <div class="map-cta">
+            <a class="nv" href="https://map.naver.com/p/search/골프존파크 도안빈스/place/1773887520" target="_blank" rel="noopener">네이버 지도 바로가기 →</a>
+            <a class="kk" href="https://map.kakao.com/?q=대전 유성구 원신흥남로12번길 42" target="_blank" rel="noopener">카카오맵 바로가기 →</a>
+          </div>
         </div>
       </div>
     </div>
