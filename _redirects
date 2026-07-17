@@ -1,3 +1,6 @@
+# 개인정보 처리방침 — 짧은 주소(/privacy)로도 열리게 rewrite(200)
+/privacy          /privacy.html   200
+
 /golfzone.html    /   301!
 /admin.html       /   301
 /camp.html        /   301
